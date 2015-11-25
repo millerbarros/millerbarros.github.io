@@ -1,18 +1,122 @@
-body{
-  margin: 0;
-  padding: 0;
-  width: 100%;
-  height: 100%;
-  background-color: #F6F6F6;
+html,
+body {
+    font-size: 120%;
+    min-height: 420px;
 }
-body .griffo{
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-  -moz-transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-  -ie-transform: translate(-50%, -50%);
-  -o-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #F6F6F6;
+    text-align: center;
+    color: #494949;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 100%;
+}
+h1{
+    font-weight: 400;
+}
+body .projects {
+    position: absolute;
+    width: 100%;
+    top: 50%;
+    font-size: 0.875rem;
+    -webkit-transform: translate(0, -50%);
+    -moz-transform: translate(0, -50%);
+    -ms-transform: translate(0, -50%);
+    -ie-transform: translate(0, -50%);
+    -o-transform: translate(0, -50%);
+    transform: translate(0, -50%);
+}
+body .projects .project-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    background-color: #FFFFFF;
+    border-top: solid 2px #E9E9E9;
+    border-bottom: solid 2px #E9E9E9;
+}
+body .projects .project-wrapper img {
+    width: 200px;
+    margin: 30px;
+    -webkit-transition: all .5s;
+    -moz-transition: all .5s;
+    -ms-transition: all .5s;
+    -ie-transition: all .5s;
+    -o-transition: all .5s;
+    transition: all .5s;
+}
+body .projects .project-wrapper a:hover img,
+body .projects .project-wrapper a:active img {
+    -webkit-transform: scale(1.15);
+    -moz-transform: scale(1.15);
+    -ms-transform: scale(1.15);
+    -ie-transform: scale(1.15);
+    -o-transform: scale(1.15);
+    transform: scale(1.15);
+}
+body .projects .author {
+    display: block;
+    padding: 20px;
+    font-size: .6rem;
+    text-shadow: none;
+    color: #999999;
+}
+body .projects .author a {
+    color: #999999;
+    text-decoration: none;
+}
+body .projects .author a:hover,
+body .projects .author a:active {
+    text-decoration: underline;
+}
+
+@media screen and (max-height: 420px){
+    body .projects {
+        position: relative;
+        display: table;
+        top: 0;
+        left: 0;
+        margin: 0 auto;
+        -webkit-transform: translate(0, 0);
+        -moz-transform: translate(0, 0);
+        -ms-transform: translate(0, 0);
+        -ie-transform: translate(0, 0);
+        -o-transform: translate(0, 0);
+        transform: translate(0, 0);
+    }
+}
+
+@media screen and (max-width: 768px){
+    body .projects {
+        position: relative;
+        top: 0;
+        left: 0;
+        -webkit-transform: translate(0, 0);
+        -moz-transform: translate(0, 0);
+        -ms-transform: translate(0, 0);
+        -ie-transform: translate(0, 0);
+        -o-transform: translate(0, 0);
+        transform: translate(0, 0);
+    }
+    body .projects .project-wrapper {
+        display: block;
+    }
+    body .projects .project-wrapper img {
+        margin: 0;
+    }
+    body .projects .project-wrapper a:first-child img {
+        margin-top: 30px;
+    }
+    body .projects .project-wrapper a:last-child img {
+        margin-bottom: 30px;
+    }
+    body .projects .project-wrapper a:before,
+    body .projects .project-wrapper a:after {
+        content: " ";
+        display: table;
+        clear: both;
+    }
 }
